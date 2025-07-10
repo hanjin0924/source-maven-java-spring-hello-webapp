@@ -40,7 +40,7 @@ pipeline {
     stage('Publish Docker Image') {
       agent { label 'controller' }
       steps {
-        withDockerRegistry(credentialsId: 'docker-registry-credential', url: 'git@github.com:hanjin0924/Jenkinsfile-docker.git') {
+        withDockerRegistry(credentialsId: 'docker-registry-credential', url: 'https://github.com/hanjin0924/Jenkinsfile-docker.git') {
           sh 'docker image push hanjin0924/myweb:$BUILD_NUMBER' // Tagging with build number
           sh 'docker image push hanjin0924/myweb:$BUILD_latest' // Tagging with latest
 
