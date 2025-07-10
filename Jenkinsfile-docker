@@ -6,7 +6,7 @@ pipeline {
         docker { image 'maven:3-openjdk-17' }
       }
       steps {
-        git branch: 'main', url: 'https://github.com/hanjin0924/Jenkinsfile-docker.git'
+        git branch: 'main', url: 'https://github.com/hanjin0924/source-maven-java-spring-hello-webapp.git'
       }
     }
     stage('Build') {
