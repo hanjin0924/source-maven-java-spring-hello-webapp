@@ -41,7 +41,7 @@ spec:
     stage('Checkout') {
       steps {
         container('maven') {
-          git branch: 'main', url: 'git@github.com:hanjin0924/source-maven-java-spring-hello-webapp.git'
+          git branch: 'main', url: 'https://github.com/hanjin0924/source-maven-java-spring-hello-webapp.git'
         }
       }
     }
